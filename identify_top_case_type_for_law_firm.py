@@ -1,10 +1,10 @@
 import unicourt
 from unicourt import *
-from prettytable import PrettyTable
+import sys
 
 # Get CLIENT_ID and CLIENT_SECRET from your account
-unicourt.CLIENT_ID = "q7pmyLuoJBDG1DZ8r1AzN48ywLLUrsXn"
-unicourt.CLIENT_SECRET = "advnPwNpHI9KBPqt5pI8K6tLjBUJ272c9OV9F-rnkuHNbRs4KOI1T6CeMn50sOkF"
+unicourt.CLIENT_ID = sys.argv[1]
+unicourt.CLIENT_SECRET = sys.argv[2]
 Authentication.generate_new_token()
 
 # Retrieve the normLawFirmId value for Kirkland & Ellis
