@@ -64,9 +64,9 @@ case_response, status = CaseAnalytics.get_case_count_analytics_by_norm_law_firm(
     page_number=1,
     q='normPartyId:"NORGxykicNHeNjNh2D" AND caseTypeId:"CTYPFQK3XeZduAfEBf"'
 )
-with open('law_firm_case_type.csv', mode='w') as case_csvfile:
+with open('law_firm_case_type.csv', mode='w') as law_firm_case_type:
     case_writer = csv.writer(
-        case_csvfile, delimiter=',')
+        law_firm_case_type, delimiter=',')
     case_writer.writerow(
         ['LawFirm', 'LawFirmId', 'Cases'])
     for case_data in case_response.results[:10]:
