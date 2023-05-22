@@ -27,6 +27,7 @@ response, status = CaseDocket.get_case_attorneys(
 # Find Normalized Attorneys
 response, status = AttorneyAnalytics.get_norm_attorney_by_id(
     norm_attorney_id='NATYpPnmW8AyT8QvjT')
+
 print(response)
 
 # Invalidate the generated access token
