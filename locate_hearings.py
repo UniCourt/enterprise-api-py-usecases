@@ -20,9 +20,13 @@ for case_data_dict in response.case_search_result_array:
 response, status = CaseDocket.get_case_hearings(
     case_id='CASEarf7613462fa75', page_number=1)
 
+print(response)
+
 # Get attorney in a case
 response, status = CaseDocket.get_case_attorneys(
     case_id='CASEarf7613462fa75', page_number=1)
+
+print(response)
 
 # Find Normalized Attorneys
 response, status = AttorneyAnalytics.get_norm_attorney_by_id(
